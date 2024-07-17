@@ -27,11 +27,14 @@
                                 <h4 class="card-title">Dashboard</h4>
                             </div>
                         </div>
-                        <div class="container-fluid px-4">
+                        <div class="container-fluid px-10">
                             <div class="row mt-4">
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-info text-white mb-4">
-                                        <div class="card-body">Data User</div>
+                                    <div class="card bg-info text-white mb-4 ml-2" style="height: 10em; width: 20em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px;">Data User</span>
+                                            <i class="fas fa-user" style="font-size: 24px;"></i>
+                                        </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="/user">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -39,8 +42,11 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-info text-white mb-4">
-                                        <div class="card-body">Data Kategori</div>
+                                    <div class="card bg-info text-white mb-4 ml-2" style="height: 10em; width: 20em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px">Data Kategori</span>
+                                            <i class="fas fa-book" style="font-size: 24px"></i>
+                                        </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="/kategori">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -48,10 +54,25 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-info text-white mb-4">
-                                        <div class="card-body">Data Barang</div>
+                                    <div class="card bg-info text-white mb-4 ml-2" style="height: 10em; width: 20em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px">Data Barang</span>
+                                            <i class="fas fa-briefcase" style="font-size: 24px"></i>
+                                        </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="/barang">View Details</a>
+                                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card bg-info text-white mb-4 ml-2" style="height: 10em; width: 20em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px">Data Laporan</span>
+                                            <i class="fas fa-file" style="font-size: 24px"></i>
+                                        </div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between">
+                                            <a class="small text-white stretched-link" href="/laporan">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         </div>
                                     </div>

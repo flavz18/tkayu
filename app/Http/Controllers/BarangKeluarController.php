@@ -54,7 +54,7 @@ class BarangKeluarController extends Controller
         $barang->stok -= $request->qty_keluar;
         $barang->save();
 
-        return redirect('/barangkeluar')->with('success', 'Data Berhasil Disimpan');
+        return redirect('/barangkeluar')->with('success_store', 'Data Berhasil Disimpan');
     }
 
 }

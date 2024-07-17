@@ -54,31 +54,7 @@ class BarangMasukController extends Controller
         $barang->stok += $request->qty_masuk;
         $barang->save();
 
-        return redirect('/barangmasuk')->with('success', 'Data Berhasil Disimpan');
+        return redirect('/barangmasuk')->with('success_store', 'Data Berhasil Disimpan');
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     $barangMasuk = BarangMasuk::find($id);
-
-    //     $barangMasuk->update([
-    //         'id_barang'     => $request->id_barang,
-    //         'nama_barang'   => $request->nama_barang,
-    //         'tgl_masuk'     => $request->tgl_masuk,
-    //         'qty_masuk'     => $request->qty_masuk,
-    //         'harga'         => $request->harga,
-    //         'total_masuk'   => $request->total_masuk,
-    //     ]);
-
-    //     return redirect('/barangMasuk')->with('success', 'Data Berhasil Diubah');
-    // }
-
-    // public function destroy($id)
-    // {
-    //     $barangMasuk = BarangMasuk::find($id);
-
-    //     $barangMasuk->delete();
-
-    //     return redirect('/barangMasuk')->with('success', 'Data Berhasil Dihapus');
-    // }
 }

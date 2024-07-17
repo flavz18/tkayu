@@ -5,7 +5,9 @@
 	<title>{{ $title }}</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/assets/img/icon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
 	
+
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -173,6 +175,7 @@
 	<script src="/assets/js/setting-demo.js"></script>
     <!-- Sweet Alert -->
 	<script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
 
 	<script >
 		$(document).ready(function() {
@@ -180,117 +183,6 @@
 		});
 	</script>
 
-<script>
-    //== Class definition
-    var SweetAlert2Demo = function() {
-
-        //== Demos
-        var initDemos = function() {
-
-            //== Sweetalert Demo 4
-            $('#alert_demo_4').click(function(e) {
-                swal({
-                    title: "SUCCESS",
-                    text: "You clicked the button!",
-                    icon: "success",
-                    buttons: {
-                        confirm: {
-                            text: "Confirm Me",
-                            value: true,
-                            visible: true,
-                            className: "btn btn-success",
-                            closeModal: true
-                        }
-                    }
-                });
-            });
-
-            $('#alert_demo_7').click(function(e) {
-                swal({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    type: 'warning',
-                    buttons:{
-                        confirm: {
-                            text : 'Yes, delete it!',
-                            className : 'btn btn-success'
-                        },
-                        cancel: {
-                            visible: true,
-                            className: 'btn btn-danger'
-                        }
-                    }
-                }).then((Delete) => {
-                    if (Delete) {
-                        swal({
-                            title: 'Deleted!',
-                            text: 'Your file has been deleted.',
-                            type: 'success',
-                            buttons : {
-                                confirm: {
-                                    className : 'btn btn-success'
-                                }
-                            }
-                        });
-                    } else {
-                        swal.close();
-                    }
-                });
-            });
-
-            $('#alert_demo_8').click(function(e) {
-                swal({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    type: 'warning',
-                    buttons:{
-                        cancel: {
-                            visible: true,
-                            text : 'No, cancel!',
-                            className: 'btn btn-danger'
-                        },        			
-                        confirm: {
-                            text : 'Yes, delete it!',
-                            className : 'btn btn-success'
-                        }
-                    }
-                }).then((willDelete) => {
-                    if (willDelete) {
-                        swal("Poof! Your imaginary file has been deleted!", {
-                            icon: "success",
-                            buttons : {
-                                confirm : {
-                                    className: 'btn btn-success'
-                                }
-                            }
-                        });
-                    } else {
-                        swal("Your imaginary file is safe!", {
-                            buttons : {
-                                confirm : {
-                                    className: 'btn btn-success'
-                                }
-                            }
-                        });
-                    }
-                });
-            })
-
-        };
-
-        return {
-            //== Init
-            init: function() {
-                initDemos();
-            },
-        };
-    }();
-
-    //== Class Initialization
-    jQuery(document).ready(function() {
-        SweetAlert2Demo.init();
-    });
-</script>
 
 <script src="{{ asset('/sw.js') }}"></script>
 <script>
@@ -327,5 +219,48 @@
 		}
 	});
 </script>
+
+<script>
+    @if(session('success_login'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Successful!',
+            text: '{{ session('success_login') }}',
+        });
+    @endif
+</script>
+
+<script>
+    @if(session('success_store'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Successful!',
+            text: '{{ session('success_store') }}',
+        });
+    @endif
+</script>
+
+<script>
+    @if(session('success_edit'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Successful!',
+            text: '{{ session('success_edit') }}',
+        });
+    @endif
+</script>
+
+<script>
+    @if(session('success_delete'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Successful!',
+            text: '{{ session('success_delete') }}',
+        });
+    @endif
+</script>
+
+
+
 </body>
 </html>

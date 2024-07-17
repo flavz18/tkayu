@@ -6,7 +6,7 @@
     <div class="content">
         <div class="page-inner">
             <div class="page-header">
-                <h4 class="page-title">Data Barang Keluar</h4>
+                <h4 class="page-title">Data Laporan Barang Keluar</h4>
                 <ul class="breadcrumbs">
                     <li class="nav-home">
                         <a href="#">
@@ -17,7 +17,7 @@
                         <i class="flaticon-right-arrow"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Data</a>
+                        <a href="#">Data Laporan</a>
                     </li>
                     <li class="separator">
                         <i class="flaticon-right-arrow"></i>
@@ -32,7 +32,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Data Barang Keluar</h4>
+                                <h4 class="card-title">Data Laporan Barang Keluar</h4>
                                 <a href="{{ route('laporan.barangKeluar.exportKeluar') }}" class="btn btn-primary btn-round ml-auto">
                                     <i class="fa fa-plus"></i>
                                     Export Data

@@ -28,7 +28,7 @@ class UserController extends Controller
             'role'     => $request->role,
         ]);
 
-        return redirect('/user')->with('success', 'Data User Berhasil Disimpan');
+        return redirect('/user')->with('success_store', 'Data Berhasil Disimpan');
     }
 
     public function update(Request $request, $id)
@@ -42,7 +42,7 @@ class UserController extends Controller
             'role'     => $request->role,
         ]);
 
-        return redirect('/user')->with('success', 'Data User Berhasil Diubah');
+        return redirect('/user')->with('success_edit', 'Data Berhasil Diubah');
     }
 
     public function destroy($id)
@@ -51,6 +51,6 @@ class UserController extends Controller
 
         $user->delete();
 
-        return redirect('/user')->with('success', 'Data User Berhasil Dihapus');
+        return redirect('/user')->with('success_delete', 'Data Berhasil Dihapus');
     }
 }

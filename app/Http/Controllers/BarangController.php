@@ -33,7 +33,7 @@ class BarangController extends Controller
             'harga_jual' => $request->harga_jual,
         ]);
 
-        return redirect('/barang')->with('success', 'Data Berhasil Disimpan');
+        return redirect('/barang')->with('success_store', 'Data Berhasil Disimpan');
     }
 
     public function update(Request $request, $id)
@@ -48,7 +48,7 @@ class BarangController extends Controller
             'harga_jual'       => $request->harga_jual,
         ]);
 
-        return redirect('/barang')->with('success', 'Data Berhasil Diubah');
+        return redirect('/barang')->with('success_edit', 'Data Berhasil Diubah');
     }
 
     public function destroy($id)
@@ -57,6 +57,6 @@ class BarangController extends Controller
 
         $barang->delete();
 
-        return redirect('/barang')->with('success', 'Data Berhasil Dihapus');
+        return redirect('/barang')->with('success_delete', 'Data Berhasil Dihapus');
     }
 }

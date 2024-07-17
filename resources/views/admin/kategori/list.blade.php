@@ -123,7 +123,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                    <form method="POST" action="/kategori/update/{{ $d->id }}" enctype="multipart/form-data">
+                <form method="POST" action="/kategori/update/{{ $d->id }}" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
 
@@ -137,7 +137,7 @@
                         <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Save Changes</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-undo"></i>Close</button>
                     </div>
-                    </form>
+                </form>
 
         </div>
     </div>

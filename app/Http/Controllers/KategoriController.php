@@ -23,7 +23,7 @@ class KategoriController extends Controller
             'nama_kategori' => $request->nama_kategori,
         ]);
 
-        return redirect('/kategori')->with('success', 'Data Berhasil Disimpan');
+        return redirect('/kategori')->with('success_store', 'Data Berhasil Disimpan');
     }
 
     public function update(Request $request, $id)
@@ -34,7 +34,7 @@ class KategoriController extends Controller
             'nama_kategori' => $request->nama_kategori,
         ]);
 
-        return redirect('/kategori')->with('success', 'Data Berhasil Diubah');
+        return redirect('/kategori')->with('success_edit', 'Data Berhasil Diubah');
     }
 
     public function destroy($id)
@@ -43,6 +43,6 @@ class KategoriController extends Controller
 
         $kategori->delete();
 
-        return redirect('/kategori')->with('success', 'Data Berhasil Dihapus');
+        return redirect('/kategori')->with('success_delete', 'Data Berhasil Dihapus');
     }
 }

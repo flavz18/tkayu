@@ -5,6 +5,7 @@
 	<title>{{ $title }}</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/assets/img/icon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
 
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
@@ -58,7 +59,7 @@
 	<script src="/assets/js/core/popper.min.js"></script>
 	<script src="/assets/js/core/bootstrap.min.js"></script>
 	<script src="/assets/js/ready.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
 
 	<script src="{{ asset('/sw.js') }}"></script>
 	<script>
@@ -78,10 +79,14 @@
 	}
 	</script>
 
-@if (session()->has('loginGagal'))
 <script>
-	swal("Login Gagal","{{ session('loginGagal') }}", "error");
+	@if(session('error_login'))
+	Swal.fire({
+		icon: 'error',
+		title: 'Login Failed!',
+		text: '{{ session('error_login') }}',
+	});
+	@endif
 </script>
-@endif
 </body>
 </html>

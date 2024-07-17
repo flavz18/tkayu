@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use function Laravel\Prompts\alert;
+
 class SesiController extends Controller
 {
     //
@@ -31,12 +33,12 @@ class SesiController extends Controller
         if(Auth::attempt($infologin)) {
             $request->session()->regenerate();
             if(Auth::user()->role == 'admin'){
-                return redirect('/admin')->with('Login Berhasil','Selamat Datang Admin');
+                return redirect('/admin')->with('success_login','Selamat Datang Admin');
             }elseif(Auth::user()->role == 'gudang'){
-                return redirect('/gudang')->with('Login Berhasil','Selamat Datang Gudang');
+                return redirect('/gudang')->with('success_login','Selamat Datang Gudang');
             }
         }else {
-            return back()->with('loginGagal','Email atau Password yang anda masukkan tidak sesuai')->withInput();
+            return back()->withInput()->with('error_login','Email atau Password yang anda masukkan tidak sesuai');
             }
         }
 

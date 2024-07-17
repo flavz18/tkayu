@@ -30,8 +30,11 @@
                         <div class="container-fluid px-4">
                             <div class="row mt-4">
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-info text-white mb-4">
-                                        <div class="card-body">Data Barang Masuk</div>
+                                    <div class="card bg-info text-white mb-4" style="heigh: 10em; width: 25em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px">Data Barang Masuk</span>
+                                            <i class="fas fa-desktop" style="font-size: 24px"></i>
+                                        </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="/barangmasuk">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -39,8 +42,11 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-info text-white mb-4">
-                                        <div class="card-body">Data Barang Keluar</div>
+                                    <div class="card bg-info text-white mb-4 ml-5" style="height: 10em; width: 25em;">
+                                        <div class="card-body d-flex align-items-center justify-content-between">
+                                            <span style="font-size: 24px">Data Barang Keluar</span>
+                                            <i class="fas fa-truck" style="font-size: 24px"></i>
+                                        </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="/barangkeluar">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
